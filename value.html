@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello, World!</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+      <p id="text"></p>
+      <input type="text" name="value" id="value" value="" />
+      <button type="submit" id="btn">click</button>
+      
+      
+      <script type="text/javascript" charset="utf-8">
+        
+        const para=document.getElementById("text");
+        
+        const btn=document.getElementById("btn");
+        btn.addEventListener('click',()=>{
+         const val=document.getElementById("value").value;
+        console.log(val);
+          para.textContent=val;
+        })
+        
+      </script>
+  </body>
+</html>

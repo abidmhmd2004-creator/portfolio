@@ -110,9 +110,63 @@
                         </div>
                     </div>
                     <div class="progress-bar">
+                        <p class="prog-title">Nodejs</p>
+                        <div class="progress-con">
+                            <p class="prog-text">80%</p>
+                            <div class="progress">
+                                <span class="nodejs"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progress-bar">
+                        <p class="prog-title">MongoDB</p>
+                        <div class="progress-con">
+                            <p class="prog-text">90%</p>
+                            <div class="progress">
+                                <span class="mongodb"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progress-bar">
+                        <p class="prog-title">SQL</p>
+                        <div class="progress-con">
+                            <p class="prog-text">80%</p>
+                            <div class="progress">
+                                <span class="sql"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progress-bar">
+                        <p class="prog-title">TypeScript</p>
+                        <div class="progress-con">
+                            <p class="prog-text">75%</p>
+                            <div class="progress">
+                                <span class="typeScript"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progress-bar">
+                        <p class="prog-title">React</p>
+                        <div class="progress-con">
+                            <p class="prog-text">70%</p>
+                            <div class="progress">
+                                <span class="react"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progress-bar">
+                        <p class="prog-title">DSA</p>
+                        <div class="progress-con">
+                            <p class="prog-text">70%</p>
+                            <div class="progress">
+                                <span class="dsa"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progress-bar">
                         <p class="prog-title">Python</p>
                         <div class="progress-con">
-                            <p class="prog-text">30%</p>
+                            <p class="prog-text">60%</p>
                             <div class="progress">
                                 <span class="python"></span>
                             </div>
@@ -158,6 +212,54 @@
                 Here is some of my work that I've done in various programming languages.
             </p>
             <div class="portfolios">
+                <div class="portfolio-item">
+                    <div class="image">
+                        <img src="img/olx.png" alt="">
+                    </div>
+                    <div class="hover-items">
+                        <h3>Project Source</h3>
+                        <div class="icons">
+                            <a href="https://github.com/abid-mhmd/OLX-Clone.git" class="icon">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="icon">
+                                <i class="fab fa fa-laptop"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="image">
+                        <img src="img/netflix.png" alt="">
+                    </div>
+                    <div class="hover-items">
+                        <h3>Project Source</h3>
+                        <div class="icons">
+                            <a href="https://github.com/abid-mhmd/Netflix-clone.git" class="icon">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="icon">
+                                <i class="fab fa fa-laptop"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="image">
+                        <img src="img/luxetimes.png" alt="">
+                    </div>
+                    <div class="hover-items">
+                        <h3>Project Source</h3>
+                        <div class="icons">
+                            <a href="https://github.com/abid-mhmd/luxeTime.git" class="icon">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://luxetimes.shop" class="icon">
+                                <i class="fab fa fa-laptop"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
                 <div class="portfolio-item">
                     <div class="image">
                         <img src="img/Screenshot (137).png" alt="">
@@ -415,16 +517,16 @@
         // name validation
         const name = document.getElementById('name');
         const nameRegex = /^[A-Za-z\s]+$/;
-        const nameError=document.getElementById("nameError");
+        const nameError = document.getElementById("nameError");
 
-        name.addEventListener('focus',()=>{
-            nameError.style.display="none";
-            })
+        name.addEventListener('focus', () => {
+            nameError.style.display = "none";
+        })
 
-        name.addEventListener('focusout',()=>{
-            if(!nameRegex.test(name.value)||name.value.trim().length<1){
-                nameError.textContent="Enter a valid Name";
-                nameError.style.display="block";
+        name.addEventListener('focusout', () => {
+            if (!nameRegex.test(name.value) || name.value.trim().length < 1) {
+                nameError.textContent = "Enter a valid Name";
+                nameError.style.display = "block";
             }
         })
 
@@ -432,55 +534,55 @@
 
         const email = document.getElementById('email');
         const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[A-Za-z]{2,}$/;
-        const emailError=document.getElementById('emailError');
+        const emailError = document.getElementById('emailError');
 
-        email.addEventListener('focus',()=>{
-            emailError.style.display="none";
+        email.addEventListener('focus', () => {
+            emailError.style.display = "none";
         })
 
-        email.addEventListener("focusout",()=>{
-          if(!email.value.includes("@") || email.value.trim().length<1 || !emailRegex.test(email.value)){
-            emailError.textContent="Enter a valid Email";
-            emailError.style.display="block";
-          }
+        email.addEventListener("focusout", () => {
+            if (!email.value.includes("@") || email.value.trim().length < 1 || !emailRegex.test(email.value)) {
+                emailError.textContent = "Enter a valid Email";
+                emailError.style.display = "block";
+            }
         })
 
         // suject validation
-        
-        const subject = document.getElementById('sub');
-        const subError=document.getElementById("subError");
 
-        subject.addEventListener('focus',()=>{
-                subError.style.display="none";
+        const subject = document.getElementById('sub');
+        const subError = document.getElementById("subError");
+
+        subject.addEventListener('focus', () => {
+            subError.style.display = "none";
         })
 
-        subject.addEventListener("focusout",()=>{
-            if(subject.value.trim().length<1){
-                subError.textContent="Enter a Subject";
-                subError.style.display="block";
+        subject.addEventListener("focusout", () => {
+            if (subject.value.trim().length < 1) {
+                subError.textContent = "Enter a Subject";
+                subError.style.display = "block";
             }
         })
 
         // message validation
 
         const message = document.getElementById('msg');
-        const msgError=document.getElementById('msgError');
+        const msgError = document.getElementById('msgError');
 
-        message.addEventListener("focus",()=>{
-            msgError.style.display="none";
+        message.addEventListener("focus", () => {
+            msgError.style.display = "none";
         })
 
-        message.addEventListener("focusout",()=>{
-            if(message.value.trim().length<1){
-            msgError.textContent="Enter a message";
-            msgError.style.display="block";
+        message.addEventListener("focusout", () => {
+            if (message.value.trim().length < 1) {
+                msgError.textContent = "Enter a message";
+                msgError.style.display = "block";
             }
         })
-       
+
         form.addEventListener('submit', function (e) {
             e.preventDefault(); // prevent default submission
 
-            
+
             // Show sending message
 
             // Prepare form data
